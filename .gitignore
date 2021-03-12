@@ -6,3 +6,4 @@ target/*
 .vscode/*
 .DS_Store
 package-lock.json
+example/keys.js
