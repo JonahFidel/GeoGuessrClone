@@ -2,9 +2,11 @@
 import React, { useState } from 'react';
 import GoogleStreetview from '../src';
 import SplitView from './split-view';
+import Keys from './keys';
 
 const Demo = () => {
-  const [key, setKey] = useState(undefined);
+  let [key] = useState(undefined);
+  key = Keys;
   const [splitViewFlag, setSplitViewFlag] = useState(false);
   const [inputVal, setInputVal] = useState('');
   return (
@@ -35,9 +37,9 @@ const Demo = () => {
             Use split screen view
           </p>
           <input value={inputVal} onChange={e => setInputVal(e.target.value)} />
-          <button onClick={() => setKey(inputVal)} type="button">
+          {/* <button onClick={() => setKey(inputVal)} type="button">
             Set key
-          </button>
+          </button> */}
         </div>
       )}
     </>
